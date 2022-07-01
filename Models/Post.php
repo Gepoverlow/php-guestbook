@@ -14,13 +14,13 @@ public function __construct(string $title, string $content, string $authorName){
     $this->title = $title;
     $this->date = date("F j, Y, g:i a");
     $this->content = $content;
-    $this->$authorName = $authorName;
+    $this->authorName = $authorName;
 
 }
 
-public function getName(){
+public function getTitle(){
 
-    return $this->name;
+    return $this->title;
     
 }
 

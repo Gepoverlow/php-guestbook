@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 //require Models
 require './Models/Post.php';
+require './Models/PostSaver.php';
 require './Models/PostLoader.php';
 
 //require Controllers

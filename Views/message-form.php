@@ -5,4 +5,5 @@
     <input id="content" name="content"></input>
     <label for="author">Author</label>
     <input id="author" name="author"></input>
+    <button type="submit" name="submit-post">Submit Post!</button>
 </form>
