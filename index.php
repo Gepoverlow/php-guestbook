@@ -16,6 +16,10 @@ if (isset($_GET['page']) && $_GET['page'] === 'guestbook-view') {
     $controller = new GuestBookController();
 }
 
+$test = new Post("a title", "some content", "an author");
+
+var_dump($test);
+
 $controller->render();
 
 
