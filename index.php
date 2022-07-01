@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 //require Models
 require './Models/Post.php';
+require './Models/PostSaver.php';
 require './Models/PostLoader.php';
 
 //require Controllers
@@ -16,9 +17,9 @@ if (isset($_GET['page']) && $_GET['page'] === 'guestbook-view') {
     $controller = new GuestBookController();
 }
 
-$test = new Post("a title", "some content", "an author");
-
-var_dump($test);
+$postSaver = new PostSaver();
+$postSaver->savePost(new Post("a title", "some content", "an author"));
+// $postSaver->getStoredPosts();
 
 $controller->render();
 
