@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-class Post{
+class Post implements JsonSerializable{
 
 private string $title;
 private string $date;
@@ -40,6 +40,15 @@ public function getAuthorName(){
 
     return $this->authorName;
     
+}
+
+public function jsonSerialize():array{
+    return [
+        'title' => $this->getTitle(),
+        'content'=> $this->getContent(),
+        'author'=>$this->getAuthorName(),
+        'date'=>$this->getDate()
+    ];
 }
 
 

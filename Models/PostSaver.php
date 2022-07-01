@@ -13,15 +13,16 @@ class PostSaver{
     }
 
 public function savePost(){
-    $postInfo = [];
-    $postInfo["title"] = $this->post->getTitle();
-    $postInfo["date"] = $this->post->getDate();
-    $postInfo["content"] = $this->post->getContent();
-    $postInfo["author"] = $this->post->getAuthorName();
 
-    $encodedInfo = json_encode($postInfo);
+    $savedPosts = file_get_contents("savedPosts.txt");
     
-    file_put_contents("savedPosts.txt", $encodedInfo, FILE_APPEND);
+    $decodedPosts = json_decode($savedPosts, true);
+    $decodedPosts[] = $this->post;
+    var_dump($decodedPosts);
+
+    $encodedPosts = json_encode($decodedPosts);
+    
+    file_put_contents("savedPosts.txt",$encodedPosts , FILE_APPEND);
 
 }
     
