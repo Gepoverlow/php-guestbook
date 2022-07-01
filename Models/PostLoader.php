@@ -8,18 +8,22 @@ public function getPosts(){
     
     $posts = [];
 
-    // $savedPosts = file_get_contents("savedPosts.txt");
-    // $decodedPosts = $this->json_decode_multi($savedPosts);
-    // var_dump($decodedPosts);
+    $savedPosts = file_get_contents("savedPosts.txt");
+    $decodedPosts = json_decode($savedPosts, true);
 
+    if($decodedPosts){
+
+        foreach($decodedPosts as $postArray){
+
+            $object = (object)$postArray;
+            $posts[] = $object;
+    
+        }
+
+    }
+    
     return $posts;  
 
 }
-
-// public function json_decode_multi($s, $assoc = false, $depth = 512, $options = 0) {
-//     if(substr($s, -1) == ',')
-//     $s = substr($s, 0, -1);
-//     return json_decode("[$s]", $assoc, $depth, $options);
-// }
     
 }
