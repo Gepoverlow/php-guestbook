@@ -2,8 +2,9 @@
 
 <main>
 
-<h1>You are now at guestbook</h1>
-<a href="index.php?page=home">Go to Home</a>
+<h1>You are now at home</h1>
+<a href="index.php?page=guestbook-view">Go to Guestbook</a>
+
 </main>
 
 <?php require 'includes/footer.php'; ?>
