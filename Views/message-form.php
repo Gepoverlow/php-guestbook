@@ -1,20 +1,15 @@
-<!-- <form action="" method="post">
-    <label for="title">Title</label>
-    <input id="title" name="title"></input>
-    <label for="content">Content</label>
-    <input id="content" name="content"></input>
-    <label for="author">Author</label>
-    <input id="author" name="author"></input>
-    <button type="submit" name="submit-post">Submit Post!</button>
-</form> -->
-
-<form>
-  <div class="form-row">
-    <div class="col">
-      <input type="text" class="form-control" placeholder="First name">
-    </div>
-    <div class="col">
-      <input type="text" class="form-control" placeholder="Last name">
-    </div>
+<form method="post">
+  <div class="mb-3">
+    <label for="author" class="form-label">Who is Posting?</label>
+    <input name="author" type="text" class="form-control" id="author">
   </div>
+  <div class="mb-3">
+    <label for="title" class="form-label">Post Title</label>
+    <input name="title" type="text" class="form-control" id="title" >
+  </div>
+  <div class="mb-3">
+    <label for="content" class="form-label">What would you like to Post?</label>
+    <input name="content" type="text" class="form-control" id="content">
+  </div>
+  <button type="submit" name="submit-post" class="btn btn-primary">Submit</button>
 </form>

@@ -1,12 +1,12 @@
 <?php require 'includes/header.php'; ?>
 
-<main class="container">
+<main class="container-fluid">
 
 <h1>You are now at guestbook</h1>
 <a href="index.php?page=home">Go to Home</a>
 
 <form action="" method="post">
-    <button name="write-post">Write a message!</button>
+    <button class="btn btn-success" name="write-post" style="margin-top:1em;">Write a message!</button>
 </form>
 
 <?php 
