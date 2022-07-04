@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 class GuestBookController{
 
-    private bool $isFormRequested = false;
+private bool $isFormRequested = false;
+private int $postLimit = 20;
 
 public function render(){
 
@@ -26,6 +27,7 @@ public function render(){
     $postLoader = new PostLoader();
     $postsArray = $postLoader->getPosts();
     $formWasRequested = $this->getIsFormRequested();
+    $maxPosts = $this->getPostLimit();
 
 require './Views/guestbook.php';
         
@@ -42,5 +44,19 @@ public function setIsFormRequested(bool $bool){
     $this->isFormRequested = $bool;
 
 }
+
+public function getPostLimit(){
+
+    return $this->postLimit;
+
+}
+
+public function setPostLimit(int $newMax){
+
+    $this->postLimit = $newMax;
+
+}
+
+
 
 }

@@ -21,18 +21,20 @@ if($formWasRequested){
 
 <div class="card-deck">
 
+<?php $count = 0; ?>
 <?php foreach($postsArray as $key => $value): ?>
-
-  <div class="card border-dark mb-3" style="max-width: 18rem;">
-    <div class="card-header"> <?= htmlspecialchars($postsArray[$key]->author); ?> said:</div>
-      <div class="card-body text-dark">
-      <h5 class="card-title"><?= htmlspecialchars($postsArray[$key]->title); ?></h5>
-      <p class="card-text"><?= htmlspecialchars($postsArray[$key]->content); ?></p>
-      <p class="card-text"><small class="text-muted">On <?= htmlspecialchars($postsArray[$key]->date); ?></small></p>
+  <?php if($count < $maxPosts): ?>
+    <div class="card border-dark mb-3" style="max-width: 18rem;">
+      <div class="card-header"> <?= htmlspecialchars($postsArray[$key]->author); ?> said:</div>
+        <div class="card-body text-dark">
+        <h5 class="card-title"><?= htmlspecialchars($postsArray[$key]->title); ?></h5>
+        <p class="card-text"><?= htmlspecialchars($postsArray[$key]->content); ?></p>
+        <p class="card-text"><small class="text-muted">On <?= htmlspecialchars($postsArray[$key]->date); ?></small></p>
+      </div>
     </div>
-  </div>
-
-<?php endforeach ?>  
+  <?php endif ?>
+  <?php $count = $count + 1; ?>
+<?php endforeach; ?>  
 
 
 
