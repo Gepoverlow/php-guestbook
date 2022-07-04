@@ -17,7 +17,8 @@ public function savePost(){
     $savedPosts = file_get_contents("savedPosts.txt");
     
     $decodedPosts = json_decode($savedPosts, true);
-    $decodedPosts[] = $this->post;
+    array_unshift($decodedPosts, $this->post);
+    // $decodedPosts[] = $this->post;
     
     $encodedPosts = json_encode($decodedPosts, JSON_PRETTY_PRINT);
     

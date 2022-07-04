@@ -1,38 +1,14 @@
 [
     {
+        "title": "new title",
+        "content": "new content",
+        "author": "new poster",
+        "date": "July 4, 2022, 11:44 am"
+    },
+    {
         "title": "This is a nice guestbook",
         "content": "Here in the contet i express my satisfaction with bootstrap cards",
         "author": "Me myself and I",
         "date": "July 4, 2022, 9:54 am"
-    },
-    {
-        "title": "Title",
-        "content": "Content",
-        "author": "Author",
-        "date": "July 4, 2022, 10:21 am"
-    },
-    {
-        "title": "Title",
-        "content": "Content",
-        "author": "Author",
-        "date": "July 4, 2022, 10:21 am"
-    },
-    {
-        "title": "Title",
-        "content": "Content",
-        "author": "Author",
-        "date": "July 4, 2022, 10:21 am"
-    },
-    {
-        "title": "title",
-        "content": "contenido",
-        "author": "yo",
-        "date": "July 4, 2022, 11:33 am"
-    },
-    {
-        "title": "titulo",
-        "content": "contenido",
-        "author": "Autor",
-        "date": "July 4, 2022, 11:34 am"
     }
 ]
