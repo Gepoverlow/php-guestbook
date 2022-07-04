@@ -1,5 +1,11 @@
 [
     {
+        "title": "Some Creative Title",
+        "content": "An interesting Content",
+        "author": "A Cool Poster",
+        "date": "July 4, 2022, 12:44 pm"
+    },
+    {
         "title": "new title",
         "content": "new content",
         "author": "new poster",
