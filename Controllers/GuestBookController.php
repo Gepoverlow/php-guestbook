@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 class GuestBookController{
 
+    private bool $isFormRequested = false;
+
 public function render(){
 
     
     if(isset($_POST["write-post"])){
         
-        require './Views/message-form.php';
+        $this->setIsFormRequested(true);
         
     } elseif(isset($_POST["submit-post"])){
         //create post and add it to the local file
@@ -23,9 +25,22 @@ public function render(){
     }
     $postLoader = new PostLoader();
     $postsArray = $postLoader->getPosts();
+    $formWasRequested = $this->getIsFormRequested();
 
 require './Views/guestbook.php';
         
+}
+
+public function getIsFormRequested(){
+
+    return $this->isFormRequested;
+
+}
+
+public function setIsFormRequested(bool $bool){
+
+    $this->isFormRequested = $bool;
+
 }
 
 }

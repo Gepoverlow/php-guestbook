@@ -9,6 +9,16 @@
     <button name="write-post">Write a message!</button>
 </form>
 
+<?php 
+
+if($formWasRequested){
+
+  require 'message-form.php';
+
+}
+
+?>
+
 <div class="card-deck">
 
 <?php foreach($postsArray as $key => $value): ?>
