@@ -1,20 +1,8 @@
 [
     {
-        "title": "tituloooo",
-        "content": "",
-        "author": "",
-        "date": "July 1, 2022, 8:08 pm"
-    },
-    {
-        "title": "y otroooooo",
-        "content": "",
-        "author": "",
-        "date": "July 1, 2022, 8:08 pm"
-    },
-    {
-        "title": "ole ole",
-        "content": "",
-        "author": "",
-        "date": "July 1, 2022, 8:09 pm"
+        "title": "This is a nice guestbook",
+        "content": "Here in the contet i express my satisfaction with bootstrap cards",
+        "author": "Me myself and I",
+        "date": "July 4, 2022, 9:54 am"
     }
 ]

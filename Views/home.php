@@ -1,6 +1,6 @@
 <?php require 'includes/header.php'; ?>
 
-<main>
+<main class="container-fluid">
 
 <h1>You are now at home</h1>
 <a href="index.php?page=guestbook-view">Go to Guestbook</a>
